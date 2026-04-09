@@ -101,6 +101,47 @@ Use this rule when deciding where the pack belongs:
 - one application repo: put it in `docs/bmad/`
 - many projects in one repo: keep shared templates in root `bmad/`, and keep real project docs in each project under `docs/bmad/`
 
+## Run With VS Code Agent
+
+After copying the pack into your repo, you can give a VS Code agent a single concise instruction like this:
+
+```md
+Use the BMAD files in `docs/bmad/` as the project workflow.
+
+Process:
+- start from the brief
+- turn it into a PRD
+- turn the PRD into architecture
+- draft one implementation story at a time
+- implement only the current story
+- run a QA review before moving to the next story
+
+Rules:
+- keep context small
+- load only the files needed for the current step
+- do not skip planning for greenfield work
+- do not implement multiple stories at once unless explicitly instructed
+- surface ambiguity before coding
+
+Files to use:
+- `docs/bmad/project-brief-template.md` or project brief
+- `docs/bmad/prd-template.md` or project PRD
+- `docs/bmad/architecture-template.md` or project architecture
+- `docs/bmad/story-template.md` or current story
+- `docs/bmad/dev-agent-rules.md`
+- `docs/bmad/qa-review-checklist.md`
+- `docs/bmad/correct-course-playbook.md`
+
+If project-specific docs already exist, prefer them over templates.
+```
+
+For a workshop-style repo, point the agent at the project-specific folder instead:
+
+```md
+Use `challenge6_capstone_project/docs/bmad/` as the source of truth for planning and implementation.
+Use the root `bmad/` folder only as shared templates and rules when the project folder does not already contain a project-specific version.
+```
+
 ## Best use cases
 
 - greenfield projects
