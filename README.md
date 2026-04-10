@@ -4,6 +4,20 @@ A lightweight Markdown pack for running a BMAD-style workflow with VS Code agent
 
 This repo is meant to be easy to fork, copy, and customize for a new project.
 
+## Where These Markdown Files Came From
+
+This pack was assembled from a BMAD walkthrough workflow rather than copied from an official upstream template.
+
+In short:
+
+- we cloned `steipete/summarize` and got it running locally against a YouTube URL
+- we installed dependencies with `pnpm` and worked around missing system tools by creating a workspace-local toolchain in `tools/`
+- we used that setup to extract the transcript from Brian's BMAD walkthrough video: `https://www.youtube.com/watch?v=LorEJPrALcg&t=47s`
+- from that transcript, we distilled the recurring BMAD flow into reusable Markdown files for planning, implementation, QA, and course correction
+- those notes became this separate reusable repo: `luisecab/bmad-method-vscode-agent-pack`
+
+The files here are therefore a practical BMAD-style starter pack based on that captured workflow: brainstorming, brief, PRD, architecture, story drafting, implementation, QA review, and rework when QA finds issues.
+
 Important note:
 
 - Forking this repo does not automatically create directories inside your application repo.
